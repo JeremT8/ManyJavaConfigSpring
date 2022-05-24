@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+    ">
+    <bean id="piano1" class="fr.formation.model.Piano"/>
+    <bean id="violon1" class="fr.formation.model.Violon"/>
+
+    <bean id="musicien1" class="fr.formation.model.Musicien">
+        <property name="morceau" value="La carioca"/>
+        <property name="instrument" ref="piano1"/>
+    </bean>
+
+
+</beans>
