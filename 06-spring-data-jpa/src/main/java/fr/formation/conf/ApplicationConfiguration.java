@@ -59,13 +59,13 @@ public class ApplicationConfiguration {
         emfb.setDataSource(getDataSource());
 
         HibernateJpaVendorAdapter adapter = new HibernateJpaVendorAdapter();
-        adapter.setShowSql(false);
+        adapter.setShowSql(true);
         adapter.setDatabase(Database.MYSQL);
 
         emfb.setJpaVendorAdapter(adapter);
 
         Properties props = new Properties();
-        props.setProperty("hibernate.hbm2ddl.auto", "update");
+        props.setProperty("hibernate.hbm2ddl.auto", "create");
 
         emfb.setJpaProperties(props);
 
